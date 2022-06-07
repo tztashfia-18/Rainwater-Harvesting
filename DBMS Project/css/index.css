@@ -1,0 +1,168 @@
+body {
+	font-family: sans-serif;
+	
+	margin: 0 auto;
+	padding: 3em 0;
+	color: #333;
+}
+header {
+	font-size: 1.5em;
+	margin: 1em 0;
+}
+footer {
+	margin-top: 4em;
+	text-align: right;
+	font-size: .8em;
+}
+
+.speak {
+	position: relative;
+	display: inline-block;
+	min-width: 2.7em;
+	margin: 1em;
+	text-align: center;
+	cursor: pointer;
+}
+
+.speak span {
+	transition: color 0.3s ease-out;
+	color: inherit;
+}
+
+.speak:after,
+.speak:before,
+.speak span:after,
+.speak span:before {
+	color: #333333;
+	background-color: currentColor;
+}
+
+.one:before,
+.one:after,
+.one span:before,
+.one span:after {
+	background-color: blue;
+}
+
+.two:before,
+.two:after,
+.two span:before,
+.two span:after {
+	background-color: green;
+}
+
+.three:before,
+.three:after,
+.three span:before,
+.three span:after {
+	background-color: #85C3E9;
+}
+
+.four:before,
+.four:after,
+.four span:before,
+.four span:after {
+	background-color: green;
+}
+
+.speak:after,
+.speak:before,
+.speak span:before,
+.speak span:after {
+	position: absolute;
+	content: '';
+	border-radius: 4px;
+}
+
+.speak:after,
+.speak:before {
+	bottom: -6px;
+	height: 4px;
+}
+
+.speak:after {
+	left: 0;
+	right: 39px;
+}
+
+.speak:before {
+	right: -2px;
+	width: 13px;
+}
+
+.speak span:before {
+	height: 0;
+	width: 4px;
+	bottom: -2px;
+	right: 7px;
+	transition: height .3s, bottom .3s;
+}
+
+.speak span:after {
+	height: 4px;
+	width: 34px;
+	bottom: -6px;
+	right: 8px;
+	transform: rotate(0deg);
+	transform-origin: left top;
+	transition: transform .3s, right .3s, width .3s;
+}
+
+.speak.active span:before {
+	height: 22px;
+	bottom: -24px;
+}
+
+.speak.active span:after {
+	right: 1px;
+	width: 40px;
+	transform: rotate(30deg);
+}
+
+.speak.active,
+.speak.active {
+	outline: 0;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+	background-color: white;
+	color: Black;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: green;}
